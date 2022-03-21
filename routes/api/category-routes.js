@@ -22,7 +22,7 @@ router.get('/:id',  async (req, res) => {
       include: [{ model: Product }],
     });
     if (!categoryGet) {
-      res.status(400).json({ message: "Category not found" });
+      res.status(400).json({ message: "Category Not Found" });
       return;
     }
     res.status(200).json(categoryGet);
@@ -52,7 +52,7 @@ router.put('/:id', async (req, res) => {
       },
     });
     if (!categoryPut) {
-      res.status(400).json({ message: "Category not found" });
+      res.status(400).json({ message: "Category Not Found" });
       return;
     }
     res.status(200).json(categoryPut);
@@ -70,7 +70,7 @@ router.delete('/:id', async (req, res) => {
       },
     });
     if (!categoryDelete) {
-      res.status(400).json({ message: "Category not found" });
+      res.status(400).json({ message: "Category Not Found" });
       return;
     }
     res.status(200).json(categoryDelete);
